@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('carbar.urls')),
     url(r'', include('carbar.urls')),
+    url("^soc/", include("social.apps.django_app.urls", namespace="social"))
+
 ]
