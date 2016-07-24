@@ -17,9 +17,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'', include('carbar.urls')),
-    url(r'', include('carbar.urls')),
-    url("^soc/", include("social.apps.django_app.urls", namespace="social"))
 
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('carbar.urls')),
+    url("^soc/", include("social.apps.django_app.urls", namespace="social")),
+    #url(r'^$', 'django_social_app.views.login'),
+    #url(r'^blog/$', 'django_social_app.views.home'),
+    #url(r'^logout/$', 'django_social_app.views.logout'),
 ]
